@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Link from "next/link";
 
 export const WorkContainer: React.FC = ({ children }) => (
@@ -14,7 +14,7 @@ export const WorkBackground: React.FC = () => (
   </div>
 );
 
-export const WorkLeft: React.FC<{ progress: number }> = ({
+export const WorkLeft: React.FC<{ progress: number, children }> = ({
   children,
   progress,
 }) => {
@@ -30,7 +30,7 @@ export const WorkLeft: React.FC<{ progress: number }> = ({
   );
 };
 
-export const WorkRight: React.FC<{ progress: number }> = ({
+export const WorkRight: React.FC<{ progress: number, children }> = ({
   children,
   progress,
 }) => {
@@ -52,7 +52,7 @@ interface LinkProps {
 }
 
 export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
-  <Link href={href}>
+  <Link href='/'>
     <a
       target="_blank"
       rel="norefferr"

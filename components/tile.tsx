@@ -1,5 +1,5 @@
-import React, { useRef, useContext } from "react";
-import ScrollContext from "../utils/scroll-observer";
+import React, { useRef, useContext, ReactNode } from "react";
+import { ScrollContext } from "../utils/scroll-observer";
 
 interface WrapperProps {
   numOfPages: number;
@@ -12,7 +12,7 @@ interface TileContextValue {
 
 export const TileContext = React.createContext<TileContextValue>({
   numOfPages: 0,
-  currentPage: 0,
+  currentPage: 0
 });
 
 export const TileWrapper: React.FC<WrapperProps> = ({
