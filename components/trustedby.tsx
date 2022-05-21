@@ -9,7 +9,7 @@ const TrustedBy: React.FC = () => (
         <div className="flex flex-col justify-center items-center">
             <h3 className="text-xl mb-10 font-bold text-center">
                 <span className="whitespace-nowrap">trusted by</span>{'  '}
-                <span className="whitespace-nowrap">some of the apps you use daily</span>
+                <span className="whitespace-nowrap">some of the biggest influencers in the space</span>
             </h3>
             <ClientLogos />
         </div>

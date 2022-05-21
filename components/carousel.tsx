@@ -4,6 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react/'
 import ClassNames from 'embla-carousel-class-names'
 import AutoPlay from 'embla-carousel-autoplay'
 import styles from '../styles/carousel.module.css'
+import selectedScrollSnap from 'embla-carousel-react/'
 
 interface ContextValue {
     embla: EmblaCarouselType | undefined
@@ -32,13 +33,13 @@ const Carousel: React.FC<Props> = ({ children, className }) => {
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return
-        setSelectedIndex(emblaApi, selectedScrollSnap())
+        setSelectedIndex(emblaApi.selectedScrollSnap())
     }, [emblaApi, setSelectedIndex])
 
     useEffect(() => {
         if (!emblaApi) return
         onSelect()
-        emblaApi, on('select', onSelect)
+        emblaApi.on('select', onSelect)
     }, [emblaApi, onSelect])
 
     return (
@@ -50,4 +51,4 @@ const Carousel: React.FC<Props> = ({ children, className }) => {
     )
 }
 
-export default CarouselContext
+export default Carousel

@@ -1,7 +1,11 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 
-export const WorkContainer: React.FC = ({ children }) => (
+type Props = {
+  children: React.ReactNode
+}
+
+export const WorkContainer: React.FC<Props> = ({ children }) => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
     {children}
   </div>
@@ -14,7 +18,7 @@ export const WorkBackground: React.FC = () => (
   </div>
 );
 
-export const WorkLeft: React.FC<{ progress: number, children }> = ({
+export const WorkLeft: React.FC<{ progress: number, children: React.ReactNode }> = ({
   children,
   progress,
 }) => {
@@ -30,7 +34,7 @@ export const WorkLeft: React.FC<{ progress: number, children }> = ({
   );
 };
 
-export const WorkRight: React.FC<{ progress: number, children }> = ({
+export const WorkRight: React.FC<{ progress: number, children: React.ReactNode }> = ({
   children,
   progress,
 }) => {
@@ -47,12 +51,13 @@ export const WorkRight: React.FC<{ progress: number, children }> = ({
   );
 };
 
-interface LinkProps {
-  href: string;
+type LinkProps = {
+  to: string;
+  children?: React.ReactNode
 }
 
-export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
-  <Link href='/'>
+export const WorkLink: React.FC<LinkProps> = ({ children, to }) => (
+  <Link href={to}>
     <a
       target="_blank"
       rel="norefferr"

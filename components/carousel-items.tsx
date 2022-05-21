@@ -3,8 +3,9 @@ import {CarouselContext} from './carousel'
 import styles from '../styles/carousel.module.css'
 
 interface Props {
-    index: number
-}
+    index: number;
+    children: React.ReactNode;
+};
 
 const CarouselItem: React.FC<Props> = ({children, index}) => {
     const { embla: emblaApi, selectedIndex} = useContext(CarouselContext)

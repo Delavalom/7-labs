@@ -1,5 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react'
 
+type Props = {
+    children: React.ReactNode
+}
+
 interface ScrollValue {
     innerWidth: number
 }
@@ -8,7 +12,7 @@ export const SizeContext = React.createContext<ScrollValue>({
     innerWidth: 0
 })
 
-const SizeObserver: React.FC = ({children}) => {
+const SizeObserver: React.FC<Props> = ({children}) => {
     const [innerWidth, setInnerWidth] = useState(0)
     const handleResize = useCallback(() => {
         setInnerWidth(window.innerWidth)

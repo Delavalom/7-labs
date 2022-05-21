@@ -17,7 +17,7 @@ const Works = () => (
             <WorkLeft progress={progress}>
               <div>We Built</div>
               <div className="text-4xl md:text-5xl font-semibold tracking-tight">
-                <WorkLink href="https://pinkpanda.io">Pink Panda</WorkLink>&apos;s app
+                <WorkLink to="https://pinkpanda.io">Pink Panda</WorkLink>&apos;s app
               </div>
             </WorkLeft>
             <WorkRight progress={progress}>
@@ -39,7 +39,7 @@ const Works = () => (
             <WorkLeft progress={progress}>
               <div>We made</div>
               <div className="text-4xl md:text-5xl font-semibold tracking-tight">
-                <WorkLink></WorkLink>
+                <WorkLink to='/'>Pink Panda</WorkLink>
               </div>
               <div>Steakwallet&nbsp;faster</div>
             </WorkLeft>
@@ -62,7 +62,7 @@ const Works = () => (
             <WorkLeft progress={progress}>
               <div>We helped</div>
               <div className="text-4xl md:text-5xl font-semibold tracking-tight">
-                <WorkLink></WorkLink>
+                <WorkLink to='/'>Pink Panda</WorkLink>
               </div>
               <div>Showtime ship faster.</div>
             </WorkLeft>

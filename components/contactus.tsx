@@ -8,7 +8,7 @@ const ContactUs: React.FC = () => {
         <div className="pb-10">
             <Image src="/assets/logo.svg" width={30} height={30} alt="logo" />
         </div>
-        <h2 className="text-4xl font-bold"></h2>
+        <h2 className="text-4xl font-bold">Wants to work with us?</h2>
         <form className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[500px]">
             <input
             id="companyName"

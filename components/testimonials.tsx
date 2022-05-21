@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => (
         <CarouselItem index={0}>
             <div>
                 <Review by='Axel (Showtime)'>
-                    Margelo and showtime both share the love for high-quality 
+                    7Labs and showtime both share the love for high-quality 
                     software and the passion for building something people want.
                 </Review>
             </div>
@@ -16,7 +16,7 @@ const Testimonials: React.FC = () => (
         <CarouselItem index={1}>
             <div>
                 <Review by='Axel (Showtime)'>
-                    Margelo and showtime both share the love for high-quality 
+                    7Labs and showtime both share the love for high-quality 
                     software and the passion for building something people want.
                 </Review>
             </div>
@@ -24,7 +24,7 @@ const Testimonials: React.FC = () => (
         <CarouselItem index={2}>
             <div>
                 <Review by='Axel (Showtime)'>
-                    Margelo and showtime both share the love for high-quality 
+                    7Labs and showtime both share the love for high-quality 
                     software and the passion for building something people want.
                 </Review>
             </div>
@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => (
         <CarouselItem index={3}>
             <div>
                 <Review by='Axel (Showtime)'>
-                    Margelo and showtime both share the love for high-quality 
+                    7Labs and showtime both share the love for high-quality 
                     software and the passion for building something people want.
                 </Review>
             </div>
@@ -40,7 +40,7 @@ const Testimonials: React.FC = () => (
         <CarouselItem index={4}>
             <div>
                 <Review by='Axel (Showtime)'>
-                    Margelo and showtime both share the love for high-quality 
+                    7Labs and showtime both share the love for high-quality 
                     software and the passion for building something people want.
                 </Review>
             </div>
