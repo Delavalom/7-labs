@@ -1,7 +1,7 @@
 import React from 'react'
-import Carousel from './carousel'
-import CarouselItem from './carousel-items'
-import Review from './review'
+import Carousel from './Carousel'
+import CarouselItem from './CarouselItem'
+import Review from './Review'
 
 const Testimonials: React.FC = () => (
     <Carousel className='bg-black text-white py-10 lg:py-20'>

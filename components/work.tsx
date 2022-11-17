@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import Link from "next/link";
 
 type Props = {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export const WorkContainer: React.FC<Props> = ({ children }) => (

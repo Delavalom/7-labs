@@ -1,6 +1,6 @@
 import React from 'react'
-import ClientLogos from './client-logos'
-import Testimonials from './testimonials'
+import ClientLogos from './ClientLogo'
+import Testimonials from './Testimonials'
 import s from '../styles/trustedBy.module.css'
 
 const TrustedBy: React.FC = () => (

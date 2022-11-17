@@ -47,10 +47,10 @@ const Skills: React.FC = () => {
           </span>
           <span
             className={`${s.skillText} inline-block`}
-            style={{ opacity: opacityForBlock(progress, 3) }}
+            style={{ opacity: opacityForBlock(progress, 2) }}
           >
             We&apos;re maintaining some of the most popular open-source
-            projects, with over <strong>1,234</strong> downloads.
+            projects, with over 1,234 downloads.
           </span>
         </div>
       </div>

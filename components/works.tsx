@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React from "react";
-import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
-import { WorkContainer, WorkBackground, WorkLeft, WorkRight, WorkLink } from "./work";
+import { Tile, TileBackground, TileContent, TileWrapper } from "./Tile";
+import { WorkContainer, WorkBackground, WorkLeft, WorkRight, WorkLink } from "./Work";
 
 
 const Works = () => (
