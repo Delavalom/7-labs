@@ -49,8 +49,8 @@ const Skills: React.FC = () => {
             className={`${s.skillText} inline-block`}
             style={{ opacity: opacityForBlock(progress, 2) }}
           >
-            We&apos;re maintaining some of the most popular open-source
-            projects, with over 1,234 downloads.
+            We&apos;re building some of the biggest
+            projects in Latam.
           </span>
         </div>
       </div>

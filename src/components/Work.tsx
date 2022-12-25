@@ -56,14 +56,7 @@ type LinkProps = {
   children?: React.ReactNode
 }
 
-export const WorkLink: React.FC<LinkProps> = ({ children, to }) => (
+export const WorkLink: React.FC<LinkProps> = ({ children, to = "_blank" }) => (
   <Link href={to}>
-    <a
-      target="_blank"
-      rel="norefferr"
-      className="underline underline-offset-8 decoration-1"
-    >
-      {children}
-    </a>
   </Link>
 );

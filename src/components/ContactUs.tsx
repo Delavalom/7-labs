@@ -1,11 +1,9 @@
-import { Logo, logos } from "../assets/Logo";
 
 const ContactUs: React.FC = () => {
   return (
     <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-screen">
       <div className="flex-1 flex flex-col justify-center items-center pt-10 lg:pt-6">
         <div className="pb-10">
-          <Logo d={logos.bolt} className="text-pink-500 w-10 h-10" />
         </div>
         <h2 className="text-4xl font-bold">Wants to work with us?</h2>
         <form className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[500px]">

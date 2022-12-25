@@ -64,7 +64,7 @@ export const TileContent: React.FC<ChildrenProps> = ({ children }) => (
 
 interface Props {
   page: number;
-  renderContent: (props: { progress: number }) => any;
+  renderContent: (props: { progress: number }) => ReactNode;
 }
 
 export const Tile: React.FC<Props> = ({ page, renderContent }) => {
