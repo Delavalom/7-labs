@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.2.1",
-    "embla-carousel-autoplay": "^7.0.5",
+    "embla-carousel-autoplay": "^7.0.6",
     "embla-carousel-class-names": "^7.0.5",
     "embla-carousel-react": "^7.0.5",
     "next": "13.1.1",
