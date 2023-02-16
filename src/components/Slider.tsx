@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useCallback, ReactNode } from "react";
+import { useRef, useContext, useCallback, type ReactNode, type FC } from "react";
 import useAnimationFrame from "../utils/use-animation-frame";
 import { SizeContext } from '../utils/size-observer'
 
@@ -6,10 +6,10 @@ interface Props {
   initialOffsetX: number;
   className: string;
   contentWidth: number;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const SliderContainer: React.FC<Props> = ({
+const SliderContainer: FC<Props> = ({
   children,
   initialOffsetX,
   className,
@@ -53,10 +53,10 @@ const SliderContainer: React.FC<Props> = ({
 
 interface ItemProps {
   width: number;
-  children: JSX.Element;
+  children: ReactNode;
 }
 
-export const SliderItem: React.FC<ItemProps> = ({ children, width }) => (
+export const SliderItem: FC<ItemProps> = ({ children, width }) => (
   <div
     className="inline-flex justify-center items-center mx-4"
     style={{ width }}

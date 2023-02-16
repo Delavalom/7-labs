@@ -1,4 +1,4 @@
-import React from "react";
+import { type FC } from "react";
 import Link from "next/link";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   socialId?: string;
 }
 
-const Member: React.FC<Props> = ({ id, name, link, socialId }) => (
+const Member: FC<Props> = ({ name, link }) => (
   <div>
         <div className='text-2xl xl:text-3xl'>{name}</div>
     <div className='text-xl'>

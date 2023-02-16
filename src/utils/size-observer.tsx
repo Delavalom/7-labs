@@ -1,35 +1,41 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import React, {
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+  createContext,
+  type FC,
+} from "react";
 
 type Props = {
-    children: React.ReactNode
-}
+  children: ReactNode;
+};
 
 interface ScrollValue {
-    innerWidth: number
+  innerWidth: number;
 }
 
-export const SizeContext = React.createContext<ScrollValue>({
-    innerWidth: 0
-})
+export const SizeContext = createContext<ScrollValue>({
+  innerWidth: 0,
+});
 
-const SizeObserver: React.FC<Props> = ({children}) => {
-    const [innerWidth, setInnerWidth] = useState(0)
-    const handleResize = useCallback(() => {
-        setInnerWidth(window.innerWidth)
-    }, [])
+const SizeObserver: FC<Props> = ({ children }) => {
+  const [innerWidth, setInnerWidth] = useState(0);
+  const handleResize = useCallback(() => {
+    setInnerWidth(window.innerWidth);
+  }, []);
 
-    useEffect(() => {
-        handleResize()
-        window.addEventListener('resize', handleResize, {passive: true})
-        return() => window.removeEventListener('resize', handleResize)
-    }, [handleResize])
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
+  }, [handleResize]);
 
-    return(
-        <SizeContext.Provider value={{innerWidth}}>
-            {children}
-        </SizeContext.Provider>
-    )
+  return (
+    <SizeContext.Provider value={{ innerWidth }}>
+      {children}
+    </SizeContext.Provider>
+  );
+};
 
-}
-
-export default SizeObserver
+export default SizeObserver;

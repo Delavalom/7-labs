@@ -1,9 +1,9 @@
-import React from "react";
+import { type FC } from "react";
 import Carousel from "./Carousel";
 import CarouselItem from "./CarouselItem";
 import Review from "./Review";
 
-type Data = Record<"index" | "by" | "review", string | number>
+type Data = { index: number; by: string; review: string };
 
 const data: Data[] = [
   {
@@ -14,7 +14,7 @@ const data: Data[] = [
   },
 ];
 
-const Testimonials: React.FC = () => (
+const Testimonials: FC = () => (
   <Carousel className="bg-black text-white py-10 lg:py-20">
     {data.map((item) => (
       <CarouselItem key={item.index} index={item.index as number}>

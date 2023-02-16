@@ -1,12 +1,14 @@
-import React from "react";
+import { type FC } from "react";
 import Member from "./Member";
 
-const AboutUs: React.FC = () => {
+const AboutUs: FC = () => {
   return (
     <section className={"flex flex-col bg-white py-20 text-3xl md:text-4xl"}>
       <div className="container mx-auto px-11">
         <p className="leading-tight max-w-5xl mx-auto text-4xl tracking-tight">
-          <strong>We will ship culture impact & creators economy movements </strong>
+          <strong>
+            We will ship culture impact & creators economy movements{" "}
+          </strong>
           Our team of expert engineers has created the best user experiences in
           some of the most popular web3 apps worldwide.
         </p>

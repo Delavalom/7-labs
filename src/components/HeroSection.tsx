@@ -1,7 +1,7 @@
-import React, {useRef, useContext, useState, useCallback} from "react";
+import {useRef, useContext, useState, useCallback, type FC} from "react";
 import { ScrollContext } from "../utils/scroll-observer";
 
-const HeroSection: React.FC = () => {
+const HeroSection: FC = () => {
     const [ imageLoaded, setImageLoaded ] = useState(false)
     const refContainer = useRef<HTMLDivElement>(null)
     const { scrollY } = useContext(ScrollContext)

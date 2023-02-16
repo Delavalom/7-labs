@@ -1,28 +1,31 @@
-import React, { useRef, useContext, ReactNode } from "react";
+import {
+  useRef,
+  useContext,
+  type ReactNode,
+  type FC,
+  createContext,
+} from "react";
 import { ScrollContext } from "../utils/scroll-observer";
 
 type ChildrenProps = {
-  children: React.ReactNode;
-}
+  children: ReactNode;
+};
 interface WrapperProps {
   numOfPages: number;
-  children: React.ReactNode;
-};
+  children: ReactNode;
+}
 
 interface TileContextValue {
   numOfPages: number;
   currentPage: number;
 }
 
-export const TileContext = React.createContext<TileContextValue>({
+export const TileContext = createContext<TileContextValue>({
   numOfPages: 0,
-  currentPage: 0
+  currentPage: 0,
 });
 
-export const TileWrapper: React.FC<WrapperProps> = ({
-  children,
-  numOfPages,
-}) => {
+export const TileWrapper: FC<WrapperProps> = ({ children, numOfPages }) => {
   const { scrollY } = useContext(ScrollContext);
   const refContainer = useRef<HTMLDivElement>(null);
 
@@ -54,11 +57,11 @@ export const TileWrapper: React.FC<WrapperProps> = ({
   );
 };
 
-export const TileBackground: React.FC<ChildrenProps> = ({ children }) => (
+export const TileBackground: FC<ChildrenProps> = ({ children }) => (
   <div className="absolute h-full w-full">{children}</div>
 );
 
-export const TileContent: React.FC<ChildrenProps> = ({ children }) => (
+export const TileContent: FC<ChildrenProps> = ({ children }) => (
   <div className="sticky top-0 h-creen overflow hidden">{children}</div>
 );
 
@@ -67,7 +70,7 @@ interface Props {
   renderContent: (props: { progress: number }) => ReactNode;
 }
 
-export const Tile: React.FC<Props> = ({ page, renderContent }) => {
+export const Tile: FC<Props> = ({ page, renderContent }) => {
   const { currentPage, numOfPages } = useContext(TileContext);
   const progress = Math.max(0, currentPage - page);
   const refContainer = useRef<HTMLDivElement>(null);
@@ -82,7 +85,8 @@ export const Tile: React.FC<Props> = ({ page, renderContent }) => {
       ref={refContainer}
       className="absolute top-0 w-full"
       style={{
-        pointerEvents: progress <= 0 || progress >= 1 ? "none" : undefined, opacity
+        pointerEvents: progress <= 0 || progress >= 1 ? "none" : undefined,
+        opacity,
       }}
     >
       {renderContent({ progress })}

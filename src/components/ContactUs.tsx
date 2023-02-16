@@ -1,5 +1,6 @@
+import { type FC } from "react";
 
-const ContactUs: React.FC = () => {
+const ContactUs: FC = () => {
   return (
     <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-screen">
       <div className="flex-1 flex flex-col justify-center items-center pt-10 lg:pt-6">

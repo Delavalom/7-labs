@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "next/image";
+import { type FC } from "react";
 import SliderContainer, { SliderItem } from "./Slider";
 
-const ClientLogos: React.FC = () => (
+const ClientLogos: FC = () => (
   <>
 
     <SliderContainer className="" contentWidth={1290} initialOffsetX={0}>

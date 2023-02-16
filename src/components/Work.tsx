@@ -1,24 +1,24 @@
-import { ReactNode } from "react";
+import { type FC, type ReactNode } from "react";
 import Link from "next/link";
 
 type Props = {
   children: ReactNode
 }
 
-export const WorkContainer: React.FC<Props> = ({ children }) => (
+export const WorkContainer: FC<Props> = ({ children }) => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
     {children}
   </div>
 );
 
-export const WorkBackground: React.FC = () => (
+export const WorkBackground: FC = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen top-0 sticky">
     <div className="bg-black h-[30vh] lg:h-auto"></div>
     <div className="bg-white h-[70vh] lg:min-h-screen"></div>
   </div>
 );
 
-export const WorkLeft: React.FC<{ progress: number, children: React.ReactNode }> = ({
+export const WorkLeft: FC<{ progress: number, children: ReactNode }> = ({
   children,
   progress,
 }) => {
@@ -34,7 +34,7 @@ export const WorkLeft: React.FC<{ progress: number, children: React.ReactNode }>
   );
 };
 
-export const WorkRight: React.FC<{ progress: number, children: React.ReactNode }> = ({
+export const WorkRight: FC<{ progress: number, children: ReactNode }> = ({
   children,
   progress,
 }) => {
@@ -53,10 +53,11 @@ export const WorkRight: React.FC<{ progress: number, children: React.ReactNode }
 
 type LinkProps = {
   to: string;
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
-export const WorkLink: React.FC<LinkProps> = ({ children, to = "_blank" }) => (
+export const WorkLink: FC<LinkProps> = ({ children, to = "_blank" }) => (
   <Link href={to}>
+    {children}
   </Link>
 );
