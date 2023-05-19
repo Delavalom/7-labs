@@ -29,7 +29,6 @@ const Works: FC = () => (
             <WorkRight progress={progress}>
               <Image
                 src="/assets/works/pinkpanda.png"
-                layout="responsive"
                 width={840}
                 height={1620}
                 alt="Pink Panda"
@@ -52,7 +51,6 @@ const Works: FC = () => (
             <WorkRight progress={progress}>
               <Image
                 src="/assets/works/steakwallet.png"
-                layout="responsive"
                 width={840}
                 height={1620}
                 alt="Steakwallet"
@@ -75,7 +73,6 @@ const Works: FC = () => (
             <WorkRight progress={progress}>
               <Image
                 src="/assets/works/Showtime.png"
-                layout="responsive"
                 width={840}
                 height={1620}
                 alt="showtime"
